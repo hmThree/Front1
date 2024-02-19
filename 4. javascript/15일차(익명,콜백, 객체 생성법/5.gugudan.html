@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function ggd(){
+            let dan=prompt("단 입력","");
+            if(dan!=""){
+                if(dan<=0){
+                    alert("음수 ㄴㄴ")
+                    return;//break대신 사용하는 탈출문
+                }
+                for(let q=1; q<=9; q++)
+                document.write(dan+"*"+i+"="+(dan*i)+"<br>")
+            }
+        }
+/*
+            let i=1;
+            while(i<=9){
+                document.write(dan+"*"+i+"="+(dan*i)+"<br>")
+                i++;
+            }
+        }*/
+    </script>
+</head>
+<body>
+    <script>
+        //ggd();
+
+        document.write("==========<p>");
+        input_string="2+3";
+        a="444";
+        b="-123";
+        c="123.45";
+        document.write("input_string=>"+input_string+"<br>");//2+3 문자열
+        document.write("eval()함수 호출 : "+eval(input_string)+"<br>");//자바스크립트 코드로 변환시켜주는 함수
+        document.write("parseInt(a)=>"+parseInt(a)+"<br>")
+        document.write("parseInt(b)=>"+parseInt(b)+"<br>")//문자열 상수->숫자로
+        document.write("parseInt(c)=>"+parseFloat(c)+"<br>")//문자열 상수->소수점
+        document.write("isNaN(45) : "+isNaN(45)+"<br>") //숫자면 false, 문자면 true
+        document.write("isNaN(ab) : "+isNaN(ab)+"<br>")
+
+        
+    </script>
+    <p></p>
+    <input type="button" value="ㄱㄱㄷ" onclick="ggd()">
+</body>
+</html>

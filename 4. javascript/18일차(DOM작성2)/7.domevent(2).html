@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7.domevet2.html</title>
+    <script>
+        window.onload=function(){
+            let header=document.getElementById("myHeader");
+            if(header.attachEvent){
+                header.attatchEvent();//1. 발생시킨 이벤트 종류명 , 2. 그런 이벤트 종료했을 시 처리해야 할 함수명
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 id="myHeader">click</h1>
+</body>
+</html>

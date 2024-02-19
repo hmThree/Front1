@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //입력받은 문자열(s, string)을 전달받아 처리해주는 함수
+        function StringPrint(s){
+            // 1.concat : 문자열 결합
+            document.write("s.concat('test')=>"+s.concat("test")+"<br>");
+            // 2.substring(시작인덱스번호 O, 종료인덱스번호 -1)
+            document.write("s.substring(1,4)=>"+s.substring(1,4)+"<br>");
+            // 3.시작인덱스번호부터 문자열 끝까지
+            document.write("s.substring(1)=>"+s.substring(1)+"<br>");
+            // 4.toUpperCase() 대문자로 변환<->toLowerCase()
+            document.write("s.toUpperCase()=>"+s.toUpperCase()+"<br>");
+            // 5.특정 문자열 변경->replace(변경전, 변경후)
+            document.write("s.replace(l,t)=>"+s.replace('l','t')+"<br>");
+            // 6.문자열의 길이
+            document.write("s.length=>"+s.length+"<br>");
+            // 7.문자열중, 특정 위치에 있는 문자 출력
+            document.write("s.charAt(2)=>"+s.charAt(2)+"<br>");
+            // 8.특정문자가 몇번째 인덱스 번호의 위치(가장 빨리 찾은 번호 리턴)
+            document.write("s.indexOf=>"+s.s.indexOf('l')+"<br>");
+            // 9.indexOf의 반대, 뒤에서부터 찾는경우 lastIndexOf / 뒤에서부터 찾지만, 계산은 앞에서부터
+            document.write("s.lastindexOf=>"+s. lastindexOf('l')+"<br>");
+            // 10.공백제거->trim()
+            document.write("s.trim()=>"+s.trim()+"<br>");
+            // 11.split메서드 특정 구분자를 이용해 분리시키는 메서드
+            document.write("s.split(',')=>"+s.split(',')+"<br>");
+            let t=s.split(",");
+            for(let i=0; i<t.length; i++)
+                document.write("t->"+t[i]+"<br>");
+        }
+        let input=prompt("아무문자열이나 입력");
+        StringPrint(input);//문자열 전달
+    </script>
+    
+</body>
+</html>

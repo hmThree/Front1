@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6.class선택자 작성법.html</title>
+    <style>
+    /* 클래스 선택자 -> 서로 같은 태그를 구분해서 스타일을 적용시키고 싶을 때
+                       형식)태그명.클래스명(=임의의 단어)
+                       태그명을 생략하면 = 특정 클래스명을 가진 모든 태그가 스타일 적용대상자
+                       text-decoration:글꼴장식
+                       underline 밑줄
+                       <u> 태그
+                       overline 글자 위에 선긋기
+                       line-through 글자중간에 선긋기
+                       text-align 수평정렬(left, center, right)
+                       vertical-align 수직정렬(top, middle, bottom)
+
+                       일반적으로 모든 태그에 적용되지만, 스타일 적용 안되는 경우도 있음(div, span태그가 스타일 적용태그)
+    */
+    div.a{/*div태그중 클래스 선택자가 a인 태그 찾기*/
+        font-family:impact;
+        color: brown;
+        font-weight: bold;
+    }
+    div.b{
+        font-style: italic;
+        font-family:돋움체;
+        font-size:23pt;
+    }
+    .c{  /*클래스속성c를 가진 모든 태그 적용*/
+        text-align:center;
+        text-decoration:overline;
+
+    }
+
+
+    </style>
+
+
+</head>
+<body><!--div 태그 / 영역을 설정할 때 사용 = section(아티클과 비슷)-->
+    <div class="a">div태그</div>
+    <div class="b">div태그2</div>
+    <div>div태그3</div>
+
+    <hr>
+    <h2>서로다른 여러 태그에 공통의 스타일을 적용시킬 수 있다</h2>
+    <a class="c">A태그(class=c) 적용</a>
+    <i class="c">I태그(class=c) 적용</i>.
+    <div class="c">div태그(class=c) 적용</div>
+    <span class="c">span태그(class=c) 적용</span>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS의 포지션</title>
+    <style>
+        /*
+        position : 영역을 설정할 때 사용, (width, height 등... 크기) + (left, top 등... 위치)
+
+        1. default : static -> 작성한 순서대로(순차적으로) 화면에 보이게 배치하는 영역 설정 방법
+        2. absolute : 기준점(브라우저의 좌상단) -> left, top, width, heigh 사용
+        3. relative : 상대적인 좌표 배치 방법 -> 실행결과가 static과 비슷, left, top이 설정되지 않은 상태(기준)
+        4. fixed : 고정된 위치에서 움직이지 않은 속성, 위아래 스크롤해도 고정된 위치 그대로 유지
+        */
+        .rel{
+            position:relative;
+        }
+        .rel2{
+            position:relative; top:30px; left:40px;/*레프트 <-음수 양수-> 
+                                                     탑    ↓양수 ↑음수*/
+        }
+        .rel3{
+            position:absolute; top:30px; left:40px;
+        }
+        .fix{
+            position:fixed;
+            bottom:0; right:0; /*우측 끝에 배치*/
+            width:200px;
+            border:solid 3px #0066ff;
+            background-color: white;
+            font-size:12px;
+        }
+    </style>
+</head>
+<body>
+    <div style="background:red; width:60px; height:60px;"></div>
+    <div style="position:static; background:blue; width:60px; height:60px;"></div>
+    <div class="fix">fixed된 문자열 연습입니다</div>
+    <div class="rel" style="background:mistyrose; width:60px; height:60px;"></div>
+   <!-- <div class="rel2" style="background:lightseagreen; width:60px; height:60px;"></div>-->
+    <div class="rel3" style="background:lightyellow; width:60px; height:60px;"></div>
+    <div class="rel" style="background:palevioletred; left:100px; top:50px; width:60px; height:60px;"></div>
+</body>
+</html>

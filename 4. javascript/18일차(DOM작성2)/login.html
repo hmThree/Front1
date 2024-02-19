@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인창</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <style>
+        /*
+        공통스타일 시트 -> 1. 파일로 불러오기
+        2. 특정 페이지에서 사용하는 경우, 스타일 태그를 사용해서 적용시키기
+        */
+        body{text-align: center;
+        background-color: #FFFFCC;}
+        
+        table{
+            margin:0 auto;
+        }
+
+    </style>
+    <script src="script.js"></script>
+</head>
+<body onload="document.login.mem_id.focus()">
+    <!-- window.onload=function(){
+        document.login.mem_id.focus(); 와 같은 방식
+    } -->
+    <!--
+        디자인 =>  table+input box(form)
+        table>tr*4>td*2
+    -->
+
+    <center>                                                        <!--가운데 정렬-->
+        <table>                                                     <!--form:post, form action="전송할 페이지 이름"-->
+            <form name="login" action="LoginProc.jsp" method="post">
+            <tr>                                                    <!--로그인 타이틀명 h4{로그인}-->
+                <td align="center" colspan="2"><h4>로그인</h4></td>
+                <td></td>
+            </tr>
+            <tr>
+                <!--
+                label 태그를 사용해 라벨명과 입력박스를 연결시키는 방법
+                <label for ="연결 시킬 id값">레이블명</label>
+                -->
+                <td><label for="id">아이디</label></td>
+                <td><input type="text" name="mem_id" id="id"></td>          <!--input:text-->
+            </tr>
+            <tr>
+                <td>패스워드</td>                                      <!--input:password-->     
+                <td><input type="password" name="password"></td>
+            </tr>
+            <tr><!--가운데 버튼 2개 배치 / 로그인, 회원가입-->
+                <td align="center" colspan="2">
+                    <input type="button" value="로그인" onclick="loginCheck()">&nbsp;
+                    <input type="button" value="회원가입"  onclick="document.location='agreement.html'">
+                </td>               <!--input:btn-->
+                <!-- <td><input type="button" value="회원가입"></td> -->
+
+            </tr>
+            </form>
+        </table>
+
+
+
+    </center>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!--
+    추가2
+    input:text=>문자열 입력 -> 23을 입력해도 겉은 숫자로 보이지만 내부적으론 문자열로 보임
+    input:number=>숫자 입력, 계산가능, min/max/step(증감)/value(현재 설정값)
+    input:range=>음량바 처럼 bar로 숫자를 표시함
+-->
+

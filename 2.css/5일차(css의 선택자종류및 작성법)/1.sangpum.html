@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.sangpum.html</title>
+</head>
+<body>
+<div><!-- div(전체 영역을 설정할때 사용하는 태그)-->
+            <h1>
+                <center>상품주문서</center>
+            </h1>
+            <form>
+                <fieldset>
+                    <legend>개인정보</legend>
+                        <ul>
+                            <li><!-- label을 만드는 방법 2가지-->
+                                    <label for="uname">이름</label><!-- name,id을 같이 사용(동일한 이름을 부여)-->
+                                    <input type="text" name="uname" id="uname" placeholder="여백없이 입력" required>
+                            </li>
+                            <li>
+                                <label for="tel">연락</label>
+                                <input type="text" name="tel" id="tel" placeholder="연락가능한 번호" required>
+                            </li>
+                        </ul>
+                </fieldset>
+                <!--배송지 정보-->
+                <fieldset>
+                    <legend>배송지 정보</legend>
+                        <ul>
+                            <li><!--필수X 선택 O(모바일에서 자주 사용 O)-->
+                                    <label for="addr">주소</label>
+                                    <input type="text" size="40" name="addr" id="addr"  required>
+                            </li>
+                            <li>
+                                <label for="tel">전번</label>
+                                <!-- type="tel"(전화번호 전용)-->
+                                <input type="tel" name="tel2" id="tel2"  required>
+                            </li>
+                            <li>
+                                <label for="memo">메모</label>
+                                <textarea cols="40" rows="3" name="memo" id="memo"  required></textarea>
+                            </li>
+                        </ul>
+                </fieldset>
+                <!--주문 정보-->
+                <fieldset>
+                    <legend>주문정보</legend>
+                        <ul>
+                            <li>
+                                    <label><input type="checkbox"> 과테말라 안티구아(100g)</label>
+                                    <label><input type="number" name="antigua" id="antigua"
+                                                          value="0" min="0" max="5">개</label>
+                                    <!-- <input type="text" name="antigua" value="0">개-->
+                            </li>
+                            <li>
+                                <label><input type="checkbox"> 인도네시아 만델링(100g)</label>
+                                <label><input type="number" name="man" id="man"
+                                                      value="0" min="0" max="5">개</label>
+                           </li>
+                           <li>
+                            <label><input type="checkbox"> 탐라는도다(블렌딩)(100g)</label>
+                            <label><input type="number" name="do" id="do"
+                                                  value="0" min="0" max="5">개</label>
+                    </li>
+                        </ul>
+                </fieldset>
+                <!--버튼2개 중앙에 배치-->
+                <div>
+                    <center>
+                        <input type="submit" value="주문하기">
+                        <input type="reset" value="다시작성">
+                    </center>
+                </div>
+            </form>
+</div>
+</body>
+</html>

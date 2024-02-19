@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            1. const를 붙이면 상수화된 변수가 된다.
+                -> const 변수명=34 // 이 값이 고정되어 변경불가
+            2. const 변수명={key:value} //
+                -> 이렇게 생성된 객체는 값 변경 가능
+                -> 객체(=저장대상자) 생성 = 저장할 공간 생성 -> 데이터변경O
+                    ->주소값이 변경되지 않는 것
+        */                          
+        const obj0={};              //빈객체 생성 -> 임대대기중인 건물
+        const obj={id:7890};        //obj.id(객체명, 속성명(key명))
+        const obj2={bar:456};
+
+        console.log("변경전 obj.id="+obj.id);        //7890
+        //이 값을 변경하려면 객체명.속성=값
+        obj.id=2345;
+        console.log("변경후 obj.id="+obj.id);        //2345
+
+        const user={
+            name:'Lee',
+            address:{city:'Seoul'}
+        }
+        console.log(user);
+        
+        user.name='kim';
+        console.log(user);
+    </script>
+</body>
+</html>

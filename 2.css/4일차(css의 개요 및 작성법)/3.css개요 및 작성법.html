@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.css개요 및 작성법.html</title>
+
+    <style type="text/css">
+        /*여러줄 주석(자바스크립트, 자바 주석과 동일
+        2. 공통적으로 사용하는 색, 이미지, 글꼴 등을  head 영역 안에서 선언하여 사용
+        형식 / 스타일 적용 태그, (=선택지),{속성명:속성값;~}
+        특징 : 현재 보고있는 페이지만 적용 -> 링크된 다른 페이지에 반영되지 않음
+        */
+        /*h4,h3{font-family:돋움체;
+        color:green;
+        font-size:27pt;}*/
+        @import url(mystie.css);/*@import url(경로 포함해서 불러올 css 파일명) / 여기서 다크레드로 불렀지만ㄴ*/
+    </style>
+
+        <!--3.자주 사용되거나 반복적인 스타일이 있다면 파일로 만들어서 불러오기
+        link 태그 사용
+            rel typ = "텍스트형태의 css파일"
+            href = "경로 포함해 불러올 파일명"
+            이 아래가 그린으로 바꿔버림
+        -->
+    <link rel="stylesheet" type="text/css" href="test.css">
+
+</head>
+<body>
+    <header>
+        <h3>CSS의 개요 및 특징</h3></header>
+    <section>
+        <!--
+            1. 인라인 방식(style속성을 이용) / sytle="속성명:값;속성명2:값~"
+            특정한 태그에만 스타일을 적용시킬 때 사용
+            단점)동일 태그 여러번 적용시킬 경우, 복사가 불편하고 구조가 복잡함
+            특징)우선 순위가 높다(embeded보다도)
+        -->
+        <header>
+            <h4 style="font-family:바탕체;background:red;color:blue" >스타일시트의 장점</h4>
+        </header>
+        <article><!-- article*2>ol>li -->
+            <ol>
+                <li>디자인의 시간이 줄어든다</li>
+                <li>문서의 로딩속도가 빨라진다</li>
+            </ol>
+        </article>
+        <article>
+            <ol><h4>용어 정리</h4>
+                <li>스타일style : 문서의 글꼴, 크기, 간격등의 출력 형태(레이아웃)에 영향을 미치는 요소</li>
+                <li>스타일 시트Style Sheet : 스타일의 내용만을 별도로 모아 head태그 영역에 선언된 형태</li>
+            </ol>
+        </article>
+    </section>
+
+</body>
+</html>

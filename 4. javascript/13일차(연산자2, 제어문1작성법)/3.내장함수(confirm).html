@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.내장함수(confirm).html</title>
+</head>
+<body>
+    <script>
+        /*
+        사용자에게 확실한지 물어보는 경우
+        ex) let 변수명 = confirm("메시지")
+        */
+        let result=confirm("ㄹㅇ탈퇴함?"); //함수가 처리한 값을 변수에 저장(반환값)
+        alert(result);
+        console.log(result);//에러체크 및 값확인에씀
+
+        if(result)
+            alert("ㅇㅇ\nㅅㄱ");
+        else
+            alert("ㄴㄴ;;");
+        
+    </script>
+    
+</body>
+</html>

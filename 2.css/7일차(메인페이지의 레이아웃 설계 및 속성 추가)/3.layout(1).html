@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.layout(1)</title>
+    
+    <!--type은 html5에서 자동인식해주므로 보통 생략-->
+
+    <style type="text/css">
+        #jb-container{
+            width:940px; /*1000px에서 양쪽 여백 30px*/
+            border:1px solid #bcbcbc; /*약간흐린회색*/
+            margin:0 auto; /*상하0, 좌우여백은 브라우저 폭에 따라 자동 조절*/
+            padding:20px;
+        }
+        #jb-header{
+            /*margin:20px 줘도 된다.(겹치는 부분)*/
+            border:1px solid #bcbcbc;
+            padding:20px; /*테두리 패딩*/
+            /*  padding-left:50px;  /*text-indent로 설정 가능*/  
+            margin-bottom:20px;/*상단부분과 본문과의 거리를 미리 설정*/
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+    <div id="jb-container"><!--문서의 전체 태두리(컨테이너)-->
+        
+        <div id="jb-header">
+            <h2>2-column layout</h2>
+        </div>
+
+        
+        <div id="jb-content">
+
+        </div>
+
+        
+        <div id="jb-sidebar">
+
+        </div>
+
+
+        <div id="jb-footer">
+            <p>copyright</p>
+        </div>
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //익명함수를 이용해 작성 -> 객체 생성-> new Obejct()사용
+        //window.onload 이벤트 : 브라우저에서 문서를 맨 처음 읽어들일 때 발생되는 이벤트
+        window.onload=function(){
+
+
+            //형식 : let 객체명 = new Object() // 공간이 생성
+            //직접 객체명.속성=값;
+            //자바스크립트에서 값을 저장할 때, "문자열" 숫자, true/false 지정해줘야 한다.
+            let mem=new Object();//회원만 저장되는 공간을 새로 생성
+            mem.id=1234;//회원번호
+            mem.name="테스트"
+            mem.hobby="바둑"
+            //공통기능->함수로 구현(=메서드)
+            //형식 : 객체명.함수명 = function(저장할 값){this.속성명=저장할 값;}
+            mem.setHobby = function(hobby){//수정할때 사용함
+                this.hobby=hobby;//this는 mem을 가리킨다. 함수 내부에서는 직접적으로 객체명 사용 불가하여 this사용
+            }
+            //객체명.함수명=function() {return this.꺼내올 속성명;}
+            mem.getHobby=function(){
+                return this.hobby;//retrun mem.hobby
+            }
+
+            mem.toString=function(){
+                return this.id=" "+this.name+" "+this.hobby;
+            }
+            mem.setHobby("영화감상");//바둑->영화감상으로 바뀜
+            alert(mem.toString());
+        }
+    </script>
+</body>
+</html>

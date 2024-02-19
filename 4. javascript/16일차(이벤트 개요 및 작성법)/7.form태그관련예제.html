@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function test(){//유효성 검사
+            //이름란에 글자를 입력하지 않았다면
+            if(document.myForm.name.value==""){
+                alert("이름은 필수");
+                document.myForm.name.focus();
+                return false;
+            }
+            if(document.myForm.tel.value==""){
+                alert("번호도");
+                document.myForm.tel.focus();
+                return false;
+            }
+            if(document.myForm.pwd.value==""){
+                alert("암호도");
+                document.myForm.pwd.focus();
+                return false;
+            }
+            document.myForm.submit();
+        }
+
+        function test2(){//4이상~8이하 허용
+            if(documet.myForm.pwd!=""){
+                if(documet.myForm.pwd.valuelength>5 &&
+                documet.myForm.pwd.valuelength<=8){
+                    alert("정상적 암호입력");
+                }
+                else{
+                    alert("암호는 최소 5자");
+                    documet.myForm.pwd.focus();
+                }
+            }
+        }
+
+        function test3(){
+            document.myForm.name.focus();
+        }
+
+    </script>
+</head>
+<body>
+    <form name="myForm" method="post" action="Register.jsp">
+        이름:<input type="text" name="name" id="name"><br>
+        번호:<input type="text" name="tel" id="tel"><br>
+        암호:<input type="password" name="pwd" id="pwd"><br>
+        <input type="button" value="전송" onclick="test()"><br>
+        <input type="button" value="암호입력" onclick="test2()"><br>
+        <input type="reset" value="재입력" onclick="test3()"><br>
+    </form>
+    
+</body>
+</html>

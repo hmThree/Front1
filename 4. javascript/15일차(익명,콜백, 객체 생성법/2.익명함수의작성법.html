@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        //1. 함수의 매개변수, 반환값에 따라 구분(보편적)
+        //2. 함수의 이름에 따라 구분 : 이름이 있거나 없거나 -> 없을 경우를 익명함수라 부름
+
+        //x y z중 가장 큰 값은?
+
+        getMaxPrint(37,55,66)
+
+        //함수 선언 전에도 호출이 가능 요컨대 ->
+        //aaa()
+        //function aaa(){}함수선언 이런 식으로
+
+        function getMaxPrint(x,y,z){
+            let max;
+            max=(x>y)?x:y;
+            max=(max>z)?max:z;
+            document.write("max는"+max+"<br>")
+        }
+
+        let result2=getMaxPrint2(11,22,33)
+        document.write("결과2:"+result2+"<br>") //익명함수는 함수 선언 전에 호출 불가
+
+        let getMaxPrint2=function(x,y,z){   //익명함수
+            let max;
+            max=(x>y)?x:y;
+            max=(max>z)?max:z;
+            return max;
+        }
+
+        //반환값이 있게 함수 작성 getMaxPrint2(x,y,z)
+        //형식 : let 변수명=function() or function(x,y,z){함수의 기능}
+        //변수명이 함수이름으로 대신 사용
+        //function getMaxPrint2(x,y,z){//function 함수명(매개변수,,,)}
+        
+
+        getMaxPrint(12,4,9);
+
+        let result=getMaxPrint2(34,22,37)
+        document.write("max는"+result+"<br>")
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

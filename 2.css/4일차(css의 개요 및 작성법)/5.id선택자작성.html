@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>id선택자 작성.html</title>
+    <!--
+        id선택자->전체문서에서 유일한 값을 부여해서 스타일을 적용시키는 방법
+        형식) 태그명#id값(임의의 값)
+        1. 태그명을 생략해도 스타일 적용이 가능
+        2. 중의적으로 자바스크립트 언어에서도 사용(특정태그를 가리키는 예약어)
+    -->
+    <style>
+    div#x {font-family:impact;
+          font-size:23pt;
+          font-weight:bold;
+          font-style:oblique;
+          background-color:lime;}
+        #y{
+            color:blue;
+            text-indent:50px;
+        }
+    </style>
+
+
+</head>
+<body>
+    <h2>id값은 원칙적으로 유일한 값이기에 중복 허용하지 않음</h2>
+    <h1>h1태그</h1>
+    <h1 id="y">h1태그(id=y)</h1>   
+    
+    <div>div태그</div>
+    <div id="x">div태그(id=x)</div>
+</body>
+</html>

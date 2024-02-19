@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>드롭다운 상단메뉴</title>
+    <link href="css/droptop.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 상단메뉴4개 : ul>li*4>a
+    서브메뉴 -> 어느 메뉴에 마우스를 갖다대면 추가 메뉴
+    정해준 메뉴의 li태그 내부에 ul>li>a
+    -->
+    <ul class="dropdownmenu">
+        <li><a href="#">home</a></li>
+        
+        <li><a href="#">service</a>
+            <!-- ul>li*3>a -->
+            <ul>
+                <li><a href="#">HTML5</a></li>
+                <li><a href="#">CSS</a></li>
+                <!-- ul>li>a -->
+                <ul>
+                    <li><a href="#">menu1</a></li>
+                    <li><a href="#">menu2</a></li>
+                    <!-- ul>li>a -->
+                        <ul>
+                            <li><a href="#">submenu</a></li>
+                        </ul>
+                </ul>
+                <li><a href="#">JacaScript</a></li>
+            </ul>
+        </li>
+        
+        <li><a href="">about</a></li>
+        
+        <li><a href="">contact</a></li>
+    </ul>
+
+    
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload=function(){
+        let header=document.getElementById("header")
+        //초기값을 설정
+        header.style.border='2px solid black';
+        header.style.color='orange';
+        header.style.fontFamily='Helvertica';
+        header.style.backgroundColor='yellow';
+
+        function whenClick(){
+            alert('클릭');
+        }
+
+        header.onclick=function(){
+            alert('익명함수를 통해 호출');
+        }
+    }
+    </script>
+</head>
+<body>
+    <h1 id="header">Header</h1>
+</body>
+</html>

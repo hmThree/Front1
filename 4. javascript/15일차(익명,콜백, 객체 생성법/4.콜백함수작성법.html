@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //콜백함수란 : 함수가 다른 함수를 부르는 경우(work function)
+        //            매개변수 전달(숫자, 문자열, 논리적인 값)을 하지 않고 -> 함수 이름이 전달됨
+        //            매개변수 형태로 함수이름이 전달되어, 호출된 함수 내부에서 실행이 되는 함수
+
+        function callFun(other){//other=>? 직원:다른 동료의 일도 같이 실행o
+            for(let i=0;i<5;i++){//i블럭변수(for문에서만 존재)
+                other();//함수명()or 함수명(x,y,z)...
+                //test()함수 내부에서 다른 특정함수를 5번 반복해서 실행
+            }
+
+        }
+        function test(){
+            console.log('happy day!');
+        }
+        //let test=function(){console.log('happy day!');}
+        
+        callFun(test);  //만약 문자 전달이었다면 callFun('test'), 숫자 callFun(23), 논리값 callFun(true)
+                        //즉 함수 이름 전달중
+    </script>
+    
+</body>
+</html>

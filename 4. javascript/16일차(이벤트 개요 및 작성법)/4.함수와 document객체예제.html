@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            font-weight: bolder;
+            font-size:4pt;
+        }
+    </style>
+    <script>
+        //1. 문자열을 링크
+        function ex(link, alink, vlink){ // 1.링크문자열의 색 2.눌렀을 때 변경되는 색 3.방문한 적 있는 색
+            document.linkColor=link;
+            document.alinkColor=alink;
+            document.vlinkColor=vlink;
+        }
+        // 2. 문서 내부의 글자색 & 배경색 지정
+        function ex2(A,B){ //1.글자색 2.배경색  
+            document.fgColor=A;//전경색
+            document.bgColor=B;
+        }
+    </script>
+</head>
+<!--
+    onload=문서를 읽어들일 때 호출되는 이벤트를 처리해주는 경우
+    onunload=다른 사이트로 이동하는 경우(브라우저 특성을 탄다)
+-->
+<body onload="ex('red','green','gold')">
+<!-- <body onload="arlert('반가워요')"> -->
+    <a href="http:/wwww.daum.net">다음</a>
+    <input type="button" value="navy" onclick="ex2('blue','navy')">
+    <input type="button" value="white" onclick="ex2('red','yellow')">>
+    <div>클릭시 배경색 변경</div>
+    <hr>
+    <a href="JavaScript:2ex2('green','cyan')">ex2함수호출</a>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        window.onload=function(){
+            let spans=document.getElementByTagName("span");
+            for(let i=0;i<spans.length;i++){
+                if(i%2==1){
+                    spans[i].innerHTML='테스트중!!';
+                }else{
+                    spans[i].innerHTML='임시!';
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <span>연습1</span><br>
+    <span>연습2</span><br>
+    <span>연습3</span><br>
+</body>
+</html>

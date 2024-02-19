@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function startTime(){
+            today=new Date();
+            let span=document.getElementById("hour")
+            let text=today.getHours()+"시"+today.getMinutes()+"분"+today.getSeconds()+"초"
+            span.innerHTML=text;
+            //특정함수를 초단위로 계속 호출해주는 함수 setTimeout(1.호출할 함수명 2.초단위(ms))
+            isStop=setTimeout('startTime()',1000);
+        }
+
+        function stopTime(){
+            //clearTime(멈추게 해주는 setTimeout의 정보가 필요함)
+            clearTimeout(isStop);
+        }
+    </script>
+</head>
+<body>
+    <h3>오늘의 시간</h3>
+    오늘 시간<span id="hour"></span>
+
+    <input type="button" value="시작" name="start" onclick="startTime()">
+    <input type="button" value="멈춤" name="stop" onclick="stopTime()">
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.변수의 개요및 작성법.html</title>
+    <script>
+        /*
+        형식) var(let or const) 변수명=저장할값(문자,숫자,논리적인값)
+        var name="홍길동";//name변수에 홍길동이라는 문자열을 저장하라(초기화)
+        변수명=영문자+숫자+특수기호(_,$)
+        var name='홍길동';//한글자->'홍' ,"길동"(두글자 이상)
+        입출력 프로그램(입력을 받아서 처리해주는 프로그램)=>변수
+        name="김길동"; 
+        */
+        var name=prompt("당신의 이름을 입력해주세요?","홍길동");
+        var age=prompt("당신의 나이를 입력하세요?");
+        //문자열+문자열=>문자열 결합
+        document.write("name변수의 값=>"+name+"입니다<br>");//document영역에 name의 변수값을 출력하라.(write)
+        document.write("당신의 나이는"+age+"살이군요!<br>");
+        alert(name+age);
+    </script>
+</head>
+<body>
+    <!-- ol>li*5 -->
+    <ol>변수(Variable) 개요 및 특징
+        <li>변수=>사용자로부터 값을 입력(문자,숫자,논리적인값(참 또는 거짓)
+                       을 받아서 저장(메모리 공간(RAM))=>저장된 위치(이름을 부여)
+        </li>
+        <li>변수명을 줄때 대,소문자를 구분(명사) (name,Name,NAME)</li>
+        <li>var  변수명(명사)=저장할값</li>
+        <li>변수의 값은 중간에 값이 변경이되면 변경된값을 새로 저장할 수 있다.</li>
+        <li></li>
+    </ol>
+</body>
+</html>

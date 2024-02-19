@@ -1,0 +1,10 @@
+/*
+외부에서 자주 사용되는 스타일 시트 문서 작성
+*/
+
+h4,h3{
+    font-family:돋움체 바탕체 샘물체;/*글자체, 여러개를 나열하면 앞 글씨체가 안될 때 뒷 글씨체를 사용*/
+    color:green; /*글자색*/
+    font-size:27pt;
+    font-weight:bold;/*굵게 bold bolder, lighter 200, 300, 400~ , strong, b..*/
+}

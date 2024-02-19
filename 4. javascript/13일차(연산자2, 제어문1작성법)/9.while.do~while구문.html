@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9.while.do~while구문</title>
+</head>
+<body>
+    <script>
+        /*
+        반복문 -> 똑같은 문장을 정햊해진 개수만큼 반복적으로 시전
+        형식)
+        while(조건식)
+            수행1
+        특징 : 처음부터 조건식이 거짓이라면 수행하지 않음
+
+        do{
+            수행구문
+        }while(조건식)
+        특징 : 최소 한번은 수행 
+        */
+
+        
+
+        let i=1;
+
+        while(i<5){
+            document.write("구문연습"+i+"<br>")
+            i++;
+        }
+
+        do{
+            i++;
+            document.write("구문연습"+i+"<br>")
+        }while(i<5);
+
+    </script>
+    
+</body>
+</html>

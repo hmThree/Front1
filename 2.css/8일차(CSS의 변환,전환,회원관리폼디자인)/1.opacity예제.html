@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>opacity 예제</title>
+<style>
+    /*
+    opacity는 대상 이미지가 얼마나 불투명한지를 나타내는 척도, 불투명도
+    투명 <- 0.0 ~ 1.0 -> 불투명
+    */
+
+    div{
+        width:200px;
+        border:1px solid black;
+    }
+
+    .my_img1 {opacity:1.0;}
+    .my_img2 {opacity:0.5;}
+    .my_img3 {opacity:0.0;}
+
+
+</style>
+
+</head>
+<body>
+    <div>
+        <img src="../images/Desert.jpg" width="200px" height="200px" class="my_img1">
+        <p>opacity 1.0</p>
+    </div>
+    <div>
+        <img src="../images/Desert.jpg" width="200px" height="200px" class="my_img2">
+        <p>opacity 0.5</p>
+    </div>
+    <div>
+        <img src="../images/Desert.jpg" width="200px" height="200px" class="my_img3">
+        <p>opacity 0.0</p>
+    </div>
+    
+</body>
+</html>

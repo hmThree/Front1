@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css의 boxmodel</title>
+
+    <style>
+        ul{
+            background: green;
+            /*margin-바깥여백, padding-안쪽여백*/
+
+            margin:10px 20px 30px 40px; /*각각 top / right / bottom / left */
+            /* 형식:상위속성명-하위속성명-하위속성명2
+            margin-top:10:px;
+            margin-right:20:px;
+            margin-bottom:30:px;
+            margin-left:40:px;
+            */
+            padding:50px;/*마찬가지로 탑, 라이트, 바텀, 레프트*/
+            /*
+            padding-top:50px;, 안쪽여백상단/오른쪽/하단/왼쪽
+            padding-right:50px;
+            padding-bottom:50px;
+            padding-left:50px;
+            */
+        }
+
+        li{
+            color:red;
+            list-style: none;
+            background: yellow;
+            margin:30px;/*li태그의 바깥여백 = ui태그의 안쪽여백, 즉 현재 50+30px*/
+            padding: 30px;/*li태그의 안쪽여백 = 글자와 li태그 사이의 거리(=테이블의 cellpadding과 비슷)*/
+
+        }
+
+        li.withborder{
+            /*
+            border(상위속성)-하위속성
+            border:double medium red;
+            */
+            border-style:outset;/*선의 종류, 실선solid, 이중선double, 점선dotted...189p */
+            border-width:15px;/*테두리의 크기*/
+            border-color:red;/*테두리의 색*/
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>테두리가 없는 경우</li>
+        <li class="withborder">테두리가 있는 경우</li>
+    </ul>
+    
+</body>
+</html>

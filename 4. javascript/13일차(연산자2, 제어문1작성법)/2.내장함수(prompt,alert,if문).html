@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내장함수(prompt,alert,if문)</title>
+</head>
+
+
+    <!--
+        함수 : 프로그램(=회사)를 작성하는 구성요소
+        
+        함수의 종류
+            1. 사용자정의함수 : 필요에 따라 개발자가 만드는 함수
+            2. 내장 함수 : 자바스크립트 자체에서 제공되는 함수
+        
+        문장 -> 순차문 -> 코딩(coding), 순서대로 쓰여진대로 실행되는 구문
+        
+        제어문 -> 어떠한 특정 조건에 따라 실행 여부가 갈리는 구문
+            조건문(if), 반복문(for, while, do~while), 탈출문
+                =>둘 중 하나를 선택해야 하는 경우
+                if(조건식) -> 변수, 수식(관계, 논리)
+                    실행1
+                else
+                    실행2
+    -->
+    
+<body>
+    <script>
+        window.alert("경고성 문구 출력");
+        alert("두줄 나누어\n출력");//   \n 줄바꿈
+        let name=prompt("당신의 이름"); // 매개변수 2개존재
+        
+        if(name!="")
+            alert("당신의 이름은"+name+"이군요");
+        else
+            alert("이름입력x");
+
+
+    </script>
+</body>
+</html>

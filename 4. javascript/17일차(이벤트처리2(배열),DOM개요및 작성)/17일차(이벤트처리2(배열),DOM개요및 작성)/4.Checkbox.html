@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.Checkbox.html</title>
+    <script>
+           // let sel="";//선택한 그림을 저장할 변수(문자열) 전역변수
+           //"1 번 "+"1번"=>기존문자열이 이미 저장+추가된 내용이 결합(누적)=>숫자(누적 O)
+
+            function test(){
+                let sel="";
+                //만약에 1.gif를 선택했다면
+                if((document.myform.a1.checked==false) &&
+                    (document.myform.a2.checked==false) &&
+                    (document.myform.a3.checked==false)){
+                        alert("최소한의 한개의 그림은 선택하셔야 합니다.!");
+                     }else{//한개 이상 선택한경우 (1),(2),(3),(1,2),(2,3),(1,3),(1,2,3)
+                    
+                        if(document.myform.a1.checked)//참인 경우 ==true 생략가능
+                            sel=sel+" 1번";//""+" 1번"=>" 1번"
+                        if(document.myform.a2.checked)
+                            sel=sel+" 2번";//"1번 2번"
+                        if(document.myform.a3.checked)
+                            sel=sel+" 3번";
+                
+                    alert(sel+"그림이 맘에 드시는 군요!");
+                     }
+            }
+    </script>
+</head>
+<body  oncontextmenu="return false"
+            ondragstart="return false"
+            onselectstart="return false" >
+    <!-- 
+        화면디자인한 이미지,글=>마우스 오른쪽버튼 금지,드래그 & 드롭
+        oncontextmenu="return false" =>마우스 오른쪽 버튼 금지
+        ondragstart="return false" =>드래그 금지
+        onselectstart="return false" =>선택(블럭지정) 금지
+     -->
+    <form name="myform">
+        <!-- Checkbox는 여러개를 동시에 선택이 가능
+         ==>각각 따로 저장하는 변수가 필요
+        -->
+    
+        <input type="checkbox" name="a1" ><img src="../images/1.gif" ><p></p>
+        <input type="checkbox" name="a2" ><img src="../images/2.gif" ><p></p>
+        <input type="checkbox" name="a3" ><img src="../images/3.gif" ><p></p>
+        <p></p>
+        <input type="button" value="확인(결재)" onclick="test()">
+    </form>
+</body>
+</html>

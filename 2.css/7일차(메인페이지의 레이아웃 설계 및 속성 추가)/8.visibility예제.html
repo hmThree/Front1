@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예제</title>
+    <style>
+        /*
+        공통점 : 둘 다 화면상에 보이지 않음
+
+        visibility / 해당 영역이 존재하지만 보이지만 않음, 그대로 빈 공간으로 유지
+        visibility:hidden <-> visible
+
+        display / 해당 영역 자체가 사라짐, 때문에 인접한 요소의 레이아웃에 영향을 줄 수 있음
+        display:none;
+        */
+        div{
+            width:100px;
+            height: 100px;
+            background: yellow;
+            border:1px solid black;
+            float:left;/*좌->우로배치*/
+            margin:5px;
+            text-align: center;/*가로*/
+            vertical-align:middle;/*세로*/
+        }
+
+        /*.square.sql2{ display:none; /*영역 자체가 사라짐*/ 
+        .square.sql2{visibility:hidden;}/*화면에만 안보임*/
+
+    </style>
+</head>
+<body>
+    <div class="square sql1">A</div>
+    <div class="square sql2">B</div>
+    <div class="square sql3">C</div>
+    
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>왼쪽메뉴 리스트</title>
+</head>
+<body>
+    <!--
+        target -> 특정 페이지를 어느 영역에 출력할 것인가를 지정
+        _self(디폴트) -> 현재 문서에 툴력
+        _blank -> 새로운 창, 탭을 생성
+        _top -> 부모 브라우저에 출력, 버튼생성(opener) - 자식창(브라우저)
+        _parent -> 최상위 브라우저
+    -->
+    <h4>연결할 사이트 리스트</h4>
+    <ul>
+        <li><a href="http://www.chosun.com" target="_self">조선일보</a></li>
+        <li><a href="http://www.etnews.com" target="_blank">전자신문</a></li>
+        <li><a href="http://www.mk.co.kr.com" target="_top">매일경제</a></li>
+        <li><a href="http://www.naver.com" target="_parent">새창네이버</a></li>
+        <li><a href="http://www.empas.com" target="right">사용자정의지정</a></li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.css속성(문단,문자열).html</title>
+     <!-- html주석
+     1.letter-spacing:글자와 글자사이의 간격을 표시해주는 속성
+     2.word-spacing:단어와 단어사이의 간격
+     3.line-height:윗줄과 아랫줄사이의 간격(=줄간격)=>폼태그의 입력폼사이의 거리를 설정할때 자주 사용
+     4.text-indent:들여쓰기(첫라인)
+
+        클래스명 선택자명=>속성명과 동일(예제)=>권장X
+    -->
+    <style>
+      /*  ~ html주석 적용X */
+       .normal {font-size:20pt;}
+       .letter-spacing {letter-spacing:20px;font-size:20pt;}
+       .word-spacing {word-spacing:30px;font-size:20pt;}
+       .line-height {line-height:10pt;font-size:20pt;}
+       .text-indent {text-indent:100px;}
+    </style>
+</head>
+<body>
+<p class="normal text-indent">글자와 글자사이의 간격을 조절X(Default)</p>
+<p class="letter-spacing">글자와 글자사이의 간격을 20px로 지정</p>
+<p class="word-spacing">단어와 단어사이의 간격을 30px로 지정</p>
+<p class="line-height">윗줄과 아랫줄사이의 거리(50pt)</p>
+<p class="normal">바로 밑의 글자들(default)</p>
+</body>
+</html>

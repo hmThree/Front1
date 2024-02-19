@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>배열과 객체</h3>
+    <script>
+        /*
+        let test={}빈 객체
+        let test2[]내용이 없는 객체 [10,20,이기영]->객체도 배열에 저장
+        */
+
+        let persons=[];//일종의 아파트라 생각해보면
+        //person객체를 persons배열에 저장
+
+        persons.push({이름:'테스트',국어:100,수학:90,영어:80});
+        persons.push({이름:'임시',국어:76,수학:67,영어:80});
+        persons.push({이름:'테스트2',국어:34,수학:42,영어:65});
+
+        for(let i in persons){
+            persons[i].getSum=function(){
+                return this.국어+this.수학+this.영어;
+            }
+            persons[i].getAvg=function(){
+                return this.getSum()/3;//각 꺼낸 자료들의 평균
+            }
+        }
+        let output='이름,총점,평균\n';
+        for(let i in persons){
+            output+=persons[i].이름+','+persons[i].getSum()+','+persons[i].getAvg()+'\n';
+        }
+        alert(outbut);
+    </script>
+</body>
+</html>

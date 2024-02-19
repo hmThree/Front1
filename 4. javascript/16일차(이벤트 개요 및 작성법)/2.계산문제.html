@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            자바 코딩방식 : window.document.폼객체이름(myForm).입력양식개체명.속성or~속성=값
+        */
+        function sum(){
+            //alert("sum()호출");
+            //alert(document.myForm.kor.value);
+            let k=document.myForm.kor.value;
+            let e=document.myForm.eng.value;
+            let m=document.myForm.mat.value;
+            //let total=parseInt(k)+parseInt(e)+parseInt(m);
+            //소수점은 pasreFloat
+            let total=Number(k)+Number(e)+Number(m);
+            alert('합계=>'+total);
+        }
+
+    </script>
+</head>
+<body>
+    <form name="myForm" action="sum.jsp">
+        국어:<input type="text" name="kor" placeholder="국어점수" required><br>
+        영어:<input type="text" name="eng" placeholder="영어점수" required><br>
+        수학:<input type="text" name="mat" placeholder="수학점수" required>
+        <p></p>
+        <input type="button" value="합계" onclick="sum()">
+        <input type="reset" value="지우기">
+    </form>
+    
+</body>
+</html>

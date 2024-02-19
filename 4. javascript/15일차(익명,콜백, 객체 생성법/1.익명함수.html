@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>익명함수</title>
+    <script>
+        //함수선언
+        //프로그램 작성 => 단순한 문장이지만 반복적으로 작성해야하면 개발 시간이 늘어남
+        //이에 개발 시간을 단축 및 재사용하기 위해 함수 작성
+    /*
+        let x=12;
+        let y=67;
+
+        if(x>y)
+            document.write("큰값은"+x+"입니다<br>");
+        else
+            document.write("큰값은"+y+"입니다<br>");
+
+        let a=97;
+        let b=23;
+
+        if(a>b)
+            document.write("큰값은"+a+"입니다<br>");
+        else
+            document.write("큰값은"+b+"입니다<br>");
+    */
+
+    function bigger(a,b){
+        if(a>b)
+            document.write("큰값은"+a+"입니다<br>");
+        else
+            document.write("큰값은"+b+"입니다<br>");
+    }
+
+    function bigger2(a,b){
+        if(a>b)
+            return a;
+        else
+            return b;   
+    }
+
+    function bigger3(a2,b2){
+        if(parseInt(a)>parseInt(b))//자동변환이 되지만 
+            document.write("큰값은"+a+"입니다<br>");
+        else
+            document.write("큰값은"+b+"입니다<br>");
+    }
+
+    function small(a,b){
+        if(a>b)
+            document.write("작은값은"+b+"입니다<br>");
+        else
+            document.write("작은값은"+a+"입니다<br>");
+    }
+    </script>
+</head>
+<body>
+    <script>
+        //함수호출
+
+        bigger(23,56);
+        
+        let x=bigger2(33,77);
+        document.write("큰값은"+x+"임<br>");
+
+        small(43,27);
+        big3("678","372")
+    </script>
+</body>
+</html>

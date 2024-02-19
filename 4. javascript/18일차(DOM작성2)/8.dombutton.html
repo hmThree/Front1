@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function appendItem(){
+            count++;
+            let newItem=document.createElement('div')
+            newItem.setAttribute("id","item_"+count);
+            let html='새로추가된 아이템['+count+']'+'<input type="button" value="삭제"'+
+                'onclick= "removeItem('+count+')"/>';
+            newItem.innerHTML=html;
+            let itemListNode=document.getElementById('itemList');
+            itemListNode.appendChild(newItem);
+        }
+
+        function removeItem(idCount){
+            //삭제시킬 자식 태그정보 가져오기
+            let item=document.getElementById("item_"+idCount);
+            if(item!=null){//삭제시킬 자식이 있다면
+                item.parentNode.removeChild(item);
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="추가" onclick="appendItem()"><p></p>
+    <div id="itemList">
+        <!-- <div id="item_1">새로 추가된 아이템[삭제]</div> -->
+        <!-- <div id="item_2">새로 추가된 아이템[삭제]</div> -->
+    </div>
+</body>
+</html>

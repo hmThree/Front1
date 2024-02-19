@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6. switch구문1.html</title>
+</head>
+<body>
+    <script>
+        /*선택문 -> 다중if문 대신 사용
+        swith(조건){
+            case 값(숫자 문자열)
+                싷행구문1..
+                break;
+            case 값2(숫자이거나 문자열)
+                실행구문2...
+            default(생략가능)
+            */
+
+            let a=prompt("숫자 입력")
+            switch(a%2){
+                case 0: //case값
+                    document.write(a+"은짝수<br>");
+                    break;
+                case 1: //case값
+                    document.write(a+"은홀수<br>");
+                    break;
+            }
+            document.write("구문연습종료");
+
+            //추가 조건식?참:거짓; 3항연산자
+
+            let b=(a&2==0)?"짝":"홀";
+            document.write("값은"+b);
+
+
+    </script>
+    
+</body>
+</html>

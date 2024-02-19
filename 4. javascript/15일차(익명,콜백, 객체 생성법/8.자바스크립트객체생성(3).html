@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        형식)
+        let or const 객체명={
+            속성명:속성값;
+            속성명2:속성값2...
+        }
+        */
+       //const person={}빈객체 생성(=공간만 존재)
+       const person={
+            name:"홍길동",
+            age:23,
+            eat:function(food){
+                alert(this.name+'은 오늘'+food+'를 먹는다')
+            }
+        }
+        //객체명.속성명=꺼내올때 사용
+        document.write(person.name);//홍길동 출력
+    </script>
+</body>
+</html>

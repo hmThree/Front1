@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8.switch구문3범위</title>
+</head>
+<body>
+    <script>
+    /*1 ~ 10 숫자중 홀, 짝 판별*/
+
+    let a = prompt("1~10수 요망")
+    a = parseInt(a)
+
+    switch(a){
+        case 2: case "4":
+        case "6": case "8": case "10":
+            document.write("짝수래요");
+            break;
+        case "1": case "3": case "5":
+        case "7": case "9":
+            document.write("홀수래요");
+            break;
+        default :
+            document.write("내가뭐랬냐");
+            break;
+            
+        
+    }
+
+    </script>
+    
+</body>
+</html>
